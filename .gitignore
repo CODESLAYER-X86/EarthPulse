@@ -8,6 +8,7 @@ data/raw/*.h5
 
 # External Binaries & Third-party Tools
 HDFView/
+/archive/
 
 # Virtual Environments
 .venv/

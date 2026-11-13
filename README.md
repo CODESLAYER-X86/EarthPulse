@@ -111,7 +111,8 @@ python ml_engine/run_ml.py run-all
 
 ## 5. How Raw NASA Data is Handled
 
-- **Raw Granules (~18 GB):** The full unclipped NASA NISAR L2 GCOV HDF5 files are ~5.9 GB each and are preserved in NASA's open archive (ASF DAAC / CMR). Due to GitHub's 100MB file size limit, raw files are kept in the archive and downloaded on-demand using `get_asf_data.py`.
+- **Raw Granules (~18 GB):** The full unclipped NASA NISAR L2 GCOV HDF5 files are ~5.9 GB each and are preserved in NASA's open archive (ASF DAAC / CMR). Due to GitHub's 100MB file size limit, raw files are kept in the archive and can be downloaded on-demand using `download_granules.py`.
+- **Download Instructions:** For complete instructions on how to download the three raw granules using NASA Earthdata Search, ASF Vertex, or the automated Python CLI, see **[DATA_DOWNLOAD_GUIDE.md](DATA_DOWNLOAD_GUIDE.md)**.
 - **Analysis-Ready Deliverables:** Calibrated 10m resolution subset rasters (500×500 pixels over Potengi Estuary), validity masks, Enhanced Lee speckle-filtered GeoTIFFs, and GeoJSON vectors are stored in `data/` and tracked in Git, ensuring 100% reproducibility without bandwidth friction.
 
 ---

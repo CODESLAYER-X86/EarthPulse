@@ -1,7 +1,0 @@
-{
-    "errors": [
-        "Parameter [orbit_direction] was not recognized.",
-        "Parameter [relative_orbit] was not recognized.",
-        "Parameter [frame_number] was not recognized."
-    ]
-}
