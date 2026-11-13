@@ -15,7 +15,8 @@ import {
   MLStatus,
   BandStat,
   ChangeRegionProperties,
-  RegionSummaryItem
+  RegionSummaryItem,
+  MLSummaryData
 } from './types';
 
 export const App: React.FC = () => {
@@ -37,6 +38,8 @@ export const App: React.FC = () => {
 
   // Backend Data
   const [mlStatus, setMlStatus] = useState<MLStatus | null>(null);
+  const [mlSummary, setMlSummary] = useState<MLSummaryData | null>(null);
+  const [selectedCluster, setSelectedCluster] = useState<number | null>(null);
   const [statistics, setStatistics] = useState<Record<string, BandStat>>({});
   const [regionSummaries, setRegionSummaries] = useState<RegionSummaryItem[]>([]);
 
@@ -99,6 +102,11 @@ export const App: React.FC = () => {
       .then((data: MLStatus) => setMlStatus(data))
       .catch(console.error);
 
+    fetch('/api/ml/summary')
+      .then((res) => res.json())
+      .then((data: MLSummaryData) => setMlSummary(data))
+      .catch(console.error);
+
     fetch('/api/regions/summary')
       .then((res) => res.json())
       .then((data: RegionSummaryItem[]) => setRegionSummaries(data))
@@ -152,6 +160,8 @@ export const App: React.FC = () => {
           regionSummaries={regionSummaries}
           onExportCSV={handleExportCSV}
           onFlyToHotspot={handleFlyTo}
+          selectedCluster={selectedCluster}
+          onSelectCluster={setSelectedCluster}
         />
 
         {/* Central Map Canvas */}
@@ -219,6 +229,11 @@ export const App: React.FC = () => {
       <StatsDashboard
         statistics={statistics}
         regionSummaries={regionSummaries}
+        mlSummary={mlSummary}
+        currentView={currentView}
+        selectedCluster={selectedCluster}
+        onSelectCluster={setSelectedCluster}
+        onSelectCycle={setCurrentCycle}
       />
 
       {/* Reports & About Modals */}

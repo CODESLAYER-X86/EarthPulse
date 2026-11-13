@@ -59,6 +59,33 @@ export interface MLStatus {
   };
 }
 
+export interface ClusterCentroidData {
+  id: number;
+  interpretation: string;
+  pixel_count: number;
+  area_percentage: number;
+  feature_centroids_db: {
+    hh_028_db: number;
+    hh_032_db: number;
+    hh_033_db: number;
+    hv_028_db: number;
+    hv_032_db: number;
+    hv_033_db: number;
+    hh_diff_028_032: number;
+    hh_diff_032_033: number;
+    hh_diff_028_033: number;
+    hv_diff_028_032: number;
+    hv_diff_032_033: number;
+    hv_diff_028_033: number;
+  };
+}
+
+export interface MLSummaryData {
+  centroids?: Record<string, ClusterCentroidData>;
+  statistics?: Record<string, any>;
+  metadata?: Record<string, any>;
+}
+
 export interface ChangeRegionProperties {
   id: string;
   polarization: string;

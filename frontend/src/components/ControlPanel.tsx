@@ -27,6 +27,8 @@ interface ControlPanelProps {
   regionSummaries: RegionSummaryItem[];
   onExportCSV: () => void;
   onFlyToHotspot: (center: [number, number], zoom: number, name: string) => void;
+  selectedCluster?: number | null;
+  onSelectCluster?: (id: number | null) => void;
 }
 
 export const ControlPanel: React.FC<ControlPanelProps> = ({
@@ -41,7 +43,9 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   mlStatus,
   regionSummaries,
   onExportCSV,
-  onFlyToHotspot
+  onFlyToHotspot,
+  selectedCluster,
+  onSelectCluster
 }) => {
   const currentSummary = regionSummaries.find(r => `${r.pol}_${r.pair}` === selectedPair);
 
@@ -254,37 +258,44 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
             </div>
 
             <div className="space-y-2 text-xs">
-              <div className="p-2.5 bg-gray-900/80 border border-gray-800 rounded flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <span className="w-3.5 h-3.5 rounded bg-blue-500 inline-block" />
-                  <span className="font-semibold text-white">0: Water & Mudflats</span>
-                </div>
-                <span className="font-mono text-gray-400">20.1% (5.0 km²)</span>
-              </div>
+              {[
+                { id: 0, name: '0: Water & Mudflats', color: 'bg-blue-500', area: '20.1% (5.0 km²)', diff: '+2.66 dB', note: 'Inundation' },
+                { id: 1, name: '1: Dense Mangroves', color: 'bg-emerald-500', area: '29.9% (7.5 km²)', diff: '-1.30 dB', note: 'Stable Canopy' },
+                { id: 2, name: '2: Scrub & Marsh', color: 'bg-amber-500', area: '22.2% (5.6 km²)', diff: '-2.01 dB', note: 'Drying Flats' },
+                { id: 3, name: '3: Urban & Structures', color: 'bg-red-500', area: '27.8% (7.0 km²)', diff: '+0.91 dB', note: 'Reflectors' },
+              ].map((c) => {
+                const isSelected = selectedCluster === c.id;
+                return (
+                  <button
+                    key={c.id}
+                    onClick={() => onSelectCluster && onSelectCluster(isSelected ? null : c.id)}
+                    className={`w-full p-2.5 rounded border text-left transition flex items-center justify-between ${
+                      isSelected
+                        ? 'border-white bg-gray-800 shadow ring-1 ring-white/40'
+                        : 'border-gray-800 bg-gray-900/80 hover:bg-gray-800 hover:border-gray-700'
+                    }`}
+                  >
+                    <div className="flex items-center space-x-2">
+                      <span className={`w-3.5 h-3.5 rounded ${c.color} inline-block`} />
+                      <div>
+                        <span className="font-semibold text-white block">{c.name}</span>
+                        <span className="text-[10px] text-gray-400 font-mono">{c.area}</span>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <span className={`text-[11px] font-mono font-bold block ${c.diff.startsWith('+') ? 'text-emerald-400' : 'text-amber-400'}`}>
+                        {c.diff}
+                      </span>
+                      <span className="text-[9px] text-gray-500 block">60-day shift</span>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
 
-              <div className="p-2.5 bg-gray-900/80 border border-gray-800 rounded flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <span className="w-3.5 h-3.5 rounded bg-emerald-500 inline-block" />
-                  <span className="font-semibold text-white">1: Dense Mangroves</span>
-                </div>
-                <span className="font-mono text-gray-400">29.9% (7.5 km²)</span>
-              </div>
-
-              <div className="p-2.5 bg-gray-900/80 border border-gray-800 rounded flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <span className="w-3.5 h-3.5 rounded bg-amber-500 inline-block" />
-                  <span className="font-semibold text-white">2: Scrub & Marsh</span>
-                </div>
-                <span className="font-mono text-gray-400">22.2% (5.6 km²)</span>
-              </div>
-
-              <div className="p-2.5 bg-gray-900/80 border border-gray-800 rounded flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <span className="w-3.5 h-3.5 rounded bg-red-500 inline-block" />
-                  <span className="font-semibold text-white">3: Urban & Structures</span>
-                </div>
-                <span className="font-mono text-gray-400">27.8% (7.0 km²)</span>
-              </div>
+            <div className="p-2 bg-purple-950/30 border border-purple-900/40 rounded text-[11px] text-purple-300 flex items-start space-x-1.5">
+              <Sparkles className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-purple-400" />
+              <span>Click any of these 4 biomes to isolate and highlight its changes on the bottom timeline!</span>
             </div>
           </div>
         )}
