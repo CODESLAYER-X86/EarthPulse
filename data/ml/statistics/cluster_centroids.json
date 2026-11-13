@@ -1,0 +1,82 @@
+{
+  "cluster_0": {
+    "id": 0,
+    "interpretation": "Low Backscatter / Smooth Surface (Estuarine Water & Intertidal Mudflats)",
+    "pixel_count": 50164,
+    "area_percentage": 20.07,
+    "feature_centroids_db": {
+      "hh_028_db": -12.57,
+      "hh_032_db": -11.32,
+      "hh_033_db": -9.91,
+      "hv_028_db": -20.01,
+      "hv_032_db": -19.45,
+      "hv_033_db": -18.77,
+      "hh_diff_028_032": 1.26,
+      "hh_diff_032_033": 1.4,
+      "hh_diff_028_033": 2.66,
+      "hv_diff_028_032": 0.56,
+      "hv_diff_032_033": 0.69,
+      "hv_diff_028_033": 1.25
+    }
+  },
+  "cluster_1": {
+    "id": 1,
+    "interpretation": "High Cross-Pol Backscatter / Volume Scattering (Dense Mangrove Forest Canopy)",
+    "pixel_count": 74700,
+    "area_percentage": 29.88,
+    "feature_centroids_db": {
+      "hh_028_db": -6.13,
+      "hh_032_db": -7.88,
+      "hh_033_db": -7.43,
+      "hv_028_db": -12.26,
+      "hv_032_db": -13.57,
+      "hv_033_db": -13.17,
+      "hh_diff_028_032": -1.75,
+      "hh_diff_032_033": 0.45,
+      "hh_diff_028_033": -1.3,
+      "hv_diff_028_032": -1.31,
+      "hv_diff_032_033": 0.4,
+      "hv_diff_028_033": -0.91
+    }
+  },
+  "cluster_2": {
+    "id": 2,
+    "interpretation": "Intermediate Backscatter (Degraded Wetland, Scrub & Transitional Flats)",
+    "pixel_count": 55533,
+    "area_percentage": 22.21,
+    "feature_centroids_db": {
+      "hh_028_db": -10.94,
+      "hh_032_db": -11.72,
+      "hh_033_db": -12.95,
+      "hv_028_db": -21.12,
+      "hv_032_db": -19.5,
+      "hv_033_db": -20.31,
+      "hh_diff_028_032": -0.78,
+      "hh_diff_032_033": -1.22,
+      "hh_diff_028_033": -2.01,
+      "hv_diff_028_032": 1.62,
+      "hv_diff_032_033": -0.81,
+      "hv_diff_028_033": 0.81
+    }
+  },
+  "cluster_3": {
+    "id": 3,
+    "interpretation": "High Co-Pol Backscatter / Direct Scatterers (Urban Structures & Embankments)",
+    "pixel_count": 69603,
+    "area_percentage": 27.84,
+    "feature_centroids_db": {
+      "hh_028_db": -6.35,
+      "hh_032_db": -4.69,
+      "hh_033_db": -5.44,
+      "hv_028_db": -13.15,
+      "hv_032_db": -11.07,
+      "hv_033_db": -11.44,
+      "hh_diff_028_032": 1.66,
+      "hh_diff_032_033": -0.74,
+      "hh_diff_028_033": 0.91,
+      "hv_diff_028_032": 2.07,
+      "hv_diff_032_033": -0.37,
+      "hv_diff_028_033": 1.71
+    }
+  }
+}

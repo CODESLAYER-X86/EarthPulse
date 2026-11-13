@@ -1,0 +1,203 @@
+{
+    "files": [
+        {
+            "path": "data/project_manifest.json",
+            "shape": null,
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/ml/feature_metadata.json",
+            "shape": null,
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/ml/feature_stack.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/reports/primary_aoi_coordinates.json",
+            "shape": null,
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_032/HV_linear.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_032/validity_mask.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_032/HH_db.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_032/HH_linear.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_032/HV_db.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_033/HV_linear.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_033/validity_mask.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_033/HH_db.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_033/HH_linear.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_033/HV_db.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_028/HV_linear.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_028/validity_mask.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_028/HH_db.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_028/HH_linear.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/processed/cycle_028/HV_db.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/temporal/HV_diff_028_032.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/temporal/HV_diff_032_033.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/temporal/HH_diff_028_033.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/temporal/HH_diff_032_033.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/temporal/common_valid_mask.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/temporal/HV_diff_028_033.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        },
+        {
+            "path": "data/temporal/HH_diff_028_032.tif",
+            "shape": [
+                500,
+                500
+            ],
+            "status": "SUCCESS"
+        }
+    ]
+}

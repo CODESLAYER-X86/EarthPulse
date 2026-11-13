@@ -1,0 +1,131 @@
+[
+  {
+    "fileName": "NISAR_L2_PR_GCOV_033_139_D_050_0005_NASV_A_20261021T201350_20261021T201413_P05023_N_P_J_001.h5",
+    "acquisitionDate": "2026-10-21T20:13:50Z",
+    "cycle": "033",
+    "relativeOrbit": 139,
+    "direction": "ASCENDING",
+    "frame": 50,
+    "mainPol": null,
+    "sidePol": [
+      "VV"
+    ],
+    "collection": "NISAR_L2_GCOV_PROVISIONAL_V1",
+    "version": "P05023",
+    "frameCoverage": "Partial",
+    "geometry": {
+      "coordinates": [
+        [
+          [
+            21.64481,
+            74.86342
+          ],
+          [
+            17.2688,
+            73.99386
+          ],
+          [
+            21.71188,
+            72.23918
+          ],
+          [
+            25.85508,
+            73.02231
+          ],
+          [
+            21.64481,
+            74.86342
+          ]
+        ]
+      ],
+      "type": "Polygon"
+    },
+    "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_PROVISIONAL_V1/NISAR_L2_PR_GCOV_033_139_D_050_0005_NASV_A_20261021T201350_20261021T201413_P05023_N_P_J_001/NISAR_L2_PR_GCOV_033_139_D_050_0005_NASV_A_20261021T201350_20261021T201413_P05023_N_P_J_001.h5"
+  },
+  {
+    "fileName": "NISAR_L2_PR_GCOV_032_139_D_050_0005_NASV_A_20261009T201350_20261009T201413_P05023_N_P_J_001.h5",
+    "acquisitionDate": "2026-10-09T20:13:50Z",
+    "cycle": "032",
+    "relativeOrbit": 139,
+    "direction": "ASCENDING",
+    "frame": 50,
+    "mainPol": null,
+    "sidePol": [
+      "VV"
+    ],
+    "collection": "NISAR_L2_GCOV_PROVISIONAL_V1",
+    "version": "P05023",
+    "frameCoverage": "Partial",
+    "geometry": {
+      "coordinates": [
+        [
+          [
+            21.60527,
+            74.85664
+          ],
+          [
+            17.23318,
+            73.98637
+          ],
+          [
+            21.67795,
+            72.23237
+          ],
+          [
+            25.81814,
+            73.0162
+          ],
+          [
+            21.60527,
+            74.85664
+          ]
+        ]
+      ],
+      "type": "Polygon"
+    },
+    "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_PROVISIONAL_V1/NISAR_L2_PR_GCOV_032_139_D_050_0005_NASV_A_20261009T201350_20261009T201413_P05023_N_P_J_001/NISAR_L2_PR_GCOV_032_139_D_050_0005_NASV_A_20261009T201350_20261009T201413_P05023_N_P_J_001.h5"
+  },
+  {
+    "fileName": "NISAR_L2_PR_GCOV_031_139_D_050_0005_NASV_A_20260927T201350_20260927T201412_P05023_N_P_J_001.h5",
+    "acquisitionDate": "2026-09-27T20:13:50Z",
+    "cycle": "031",
+    "relativeOrbit": 139,
+    "direction": "ASCENDING",
+    "frame": 50,
+    "mainPol": null,
+    "sidePol": [
+      "VV"
+    ],
+    "collection": "NISAR_L2_GCOV_PROVISIONAL_V1",
+    "version": "P05023",
+    "frameCoverage": "Partial",
+    "geometry": {
+      "coordinates": [
+        [
+          [
+            21.55562,
+            74.84821
+          ],
+          [
+            17.36119,
+            74.01496
+          ],
+          [
+            21.80063,
+            72.25828
+          ],
+          [
+            25.77183,
+            73.00868
+          ],
+          [
+            21.55562,
+            74.84821
+          ]
+        ]
+      ],
+      "type": "Polygon"
+    },
+    "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_PROVISIONAL_V1/NISAR_L2_PR_GCOV_031_139_D_050_0005_NASV_A_20260927T201350_20260927T201412_P05023_N_P_J_001/NISAR_L2_PR_GCOV_031_139_D_050_0005_NASV_A_20260927T201350_20260927T201412_P05023_N_P_J_001.h5"
+  }
+]

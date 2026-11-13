@@ -1,0 +1,22 @@
+    {
+      "name": "Rio Preguiças Estuary & Mangroves",
+      "crs": "EPSG:32725",
+      "resolution_meters": 10.0,
+      "dimensions": {
+        "rows": 5000,
+        "columns": 5000,
+        "total_pixels": 25000000,
+        "area_km2": 2500.0
+      },
+      "raster_window": {
+        "row_start": 10000,
+        "row_end": 15000,
+        "col_start": 10000,
+        "col_end": 15000
+      },
+      "projected_center": {
+        "x": 300000.0,
+        "y": 9200000.0
+      },
+      "common_valid_coverage_pct": 99.99
+    }

@@ -1,0 +1,28 @@
+{
+  "model_type": "MiniBatchKMeans",
+  "n_clusters": 4,
+  "batch_size": 4096,
+  "max_iter": 200,
+  "random_state": 42,
+  "inertia": 1085011.125,
+  "scaler": "RobustScaler",
+  "training_pixels": 250000,
+  "study_area": "Potengi Estuary, Natal, Brazil",
+  "crs": "EPSG:32725",
+  "execution_time": "2026-11-10T17:49:15.191668Z",
+  "feature_count": 12,
+  "features": [
+    "hh_028_db",
+    "hh_032_db",
+    "hh_033_db",
+    "hv_028_db",
+    "hv_032_db",
+    "hv_033_db",
+    "hh_diff_028_032",
+    "hh_diff_032_033",
+    "hh_diff_028_033",
+    "hv_diff_028_032",
+    "hv_diff_032_033",
+    "hv_diff_028_033"
+  ]
+}
