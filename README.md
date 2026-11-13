@@ -65,34 +65,54 @@ NASA NISAR L2 GCOV (Cycles 028, 032, 033)
 
 ---
 
-## 4. Quickstart & Local Execution
+## 4. Quickstart & Local Execution (Judges & Reviewers)
 
-### Prerequisites
-- Python 3.12+ with virtual environment
-- Node.js 20+ & npm (for editing the frontend)
+> **Ready-to-Run:** All calibrated 10m analysis-ready NISAR rasters, ML artifacts, GeoJSON change vectors, and the pre-built web application are **bundled directly inside this repository**. You do **not** need to download multi-gigabyte raw files or install Node.js/npm to run and evaluate the project!
 
-### Launch the Application
-To run the full integrated system (FastAPI backend serving the built React SPA):
+### Run in 60 Seconds:
 
 ```bash
-# 1. Run the launcher
-./.venv/bin/python run_app.py
+# 1. Clone the repository
+git clone https://github.com/CODESLAYER-X86/EarthPulse.git
+cd EarthPulse
+
+# 2. Create and activate a Python virtual environment (Python 3.10+)
+python3 -m venv .venv
+source .venv/bin/activate
+
+# 3. Install backend dependencies
+pip install -r requirements.txt
+
+# 4. Launch the application
+python run_app.py
 ```
+
 Open your browser at: **`http://localhost:8000`**
+- Interactive Web App: `http://localhost:8000`
+- API Documentation (Swagger): `http://localhost:8000/docs`
+
+---
 
 ### Running the End-to-End Tests
 To verify all APIs, dynamic raster rendering, and ML endpoints:
 
 ```bash
-./.venv/bin/python tests/test_integration.py
+python tests/test_integration.py
 ```
 
 ### Reproducing the ML Pipeline
 To retrain and regenerate predictions and reports:
 
 ```bash
-./.venv/bin/python ml_engine/run_ml.py run-all
+python ml_engine/run_ml.py run-all
 ```
+
+---
+
+## 5. How Raw NASA Data is Handled
+
+- **Raw Granules (~18 GB):** The full unclipped NASA NISAR L2 GCOV HDF5 files are ~5.9 GB each and are preserved in NASA's open archive (ASF DAAC / CMR). Due to GitHub's 100MB file size limit, raw files are kept in the archive and downloaded on-demand using `get_asf_data.py`.
+- **Analysis-Ready Deliverables:** Calibrated 10m resolution subset rasters (500×500 pixels over Potengi Estuary), validity masks, Enhanced Lee speckle-filtered GeoTIFFs, and GeoJSON vectors are stored in `data/` and tracked in Git, ensuring 100% reproducibility without bandwidth friction.
 
 ---
 
